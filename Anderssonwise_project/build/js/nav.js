@@ -1,0 +1,6 @@
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+Handlebars.partials['nav'] = template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "    <header class=\"m-5\">\n      <div class=\" flex justify-between sticky top-0 z-20 w-full\">\n        <h1 class=\"\">\n            <a href=\"/build/Anderssonwise.html\">\n                <Span class=\"text-4xl \">AW</SPan>\n             </a>\n        </h1>\n        <div>\n          <button id=\"hamburger-button\" class=\"relative h-16 w-16 cursor-pointer mr-5\">\n            &#9776; \n          </button>\n        </div>\n      </div>\n    </header>\n    <div id=\"mobile-menu\"\n      class=\"hidden h-screen w-screen fixed top-0 bg-amber-800 opacity-80 text-6xl text-white p-4 m-auto z-20\">\n      <nav class=\" items-center flex flex-col justify-center m-auto\" aria-label=\"mobile\">\n        <a href=\"\"><span class=\"p-10\">STUDIO</span></a>\n        <a href=\"/build/Projects.html\"><span class=\"p-10 hover:underline\">PROJECTS</span></a>\n        <a href=\"\"><span class=\"p-10\">PRESS + AWARDS</span></a>\n        <a href=\"/build/Contact.html\"><span class=\"p-10 hover:underline\">CONTACTS</span></a>\n      </nav>\n    </div>\n";
+},"useData":true});
+})();

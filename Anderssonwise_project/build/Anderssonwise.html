@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anderssonwise</title>
+    <link rel="stylesheet" href="/build/css/style.css">
+
+</head>
+<body class="font-light text-lg">
+    <div id="output"></div>    
+    
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
+<script src="/build/js/nav.js"></script>
+<script src="/build/js/index.js"></script>
+<script src="/build/js/footer.js"></script>
+<script src="/build/js/main.js"></script>
+<script src="/build/js/basemargin.js"></script>
+<script src="/build/js/loop.js" ></script>
+<script>
+    console.log(Handlebars.templates);
+    var template = Handlebars.templates.index;
+    document.getElementById('output').innerHTML = template({doesWhat: 'Decagon'});
+</script>
+    
+</body>
+</html>

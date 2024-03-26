@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anderssonwise_Projects</title>
+  <script src="/handlebars-v4.7.8.js"></script>
+  <link rel="stylesheet" href="/build/css/style.css">
+
+</head>
+<body>
+ 
+<div id="contentDiv"></div>
+ 
+<script src="/build/js/nav.js"></script>
+<script src="/build/js/contact.js"></script>
+<script src="/build/js/footer.js"></script>
+<script src="/build/js/main.js"></script>
+<script src="/build/js/basemargin.js"></script>
+<script id="the-template" type="text/x-handlebars-template">
+
+<div>
+    {{>nav}}
+</div>  
+
+<select name="category" id="category" class="uppercase m-auto flex" >
+    <option value="all">category/all work</option>
+    <option value="arts">category/arts</option>
+    <option value="religious">category/religious</option>
+    <option value="education">category/education</option>
+    <option value="living">category/living</option>
+    <option value="commercial">category/commercial</option>
+    <option value="hospitality">category/hospitality</option>
+</select>
+
+<p id="demo" class="uppercase mx-20">All Projects</p>
+
+<section class="grid grid-cols-1 lg:grid-cols-3 w-10/12 m-auto">
+        {{#each characters}}
+        <div class="p-10 ">
+            <button class="text-left"><div class=" bg-black"><img src="/build/img/projects/{{shortCode}}.avif" alt="" class="hover:opacity-50"> <span class="absolute bottom-0 right-0 text-white">&#8594;</span></div>
+                <p class="text-2xl my-3 uppercase">{{name}}</p>
+                <p class="text-sm uppercase">{{location}}</p>
+            </button>
+        </div>
+        {{/each}}
+
+</section>
+
+{{>footer}}
+
+</script>
+
+
+
+
+<script type="text/javascript">
+var templateInfo = document.getElementById("the-template").innerHTML;
+  var template = Handlebars.compile(templateInfo);
+
+ let data = {
+
+characters: [
+  {
+    name: "Elizita Ranch",
+    shortCode: "ElizitaRanch",
+    location: "LIVING / HEBRONVILLE, TX",
+    category: "living",
+  },
+  {
+    name: "residence on mount barker",
+    shortCode: "residence",
+    location: "LIVING / AUSTIN, TX",
+    category: "living",
+
+  },
+  {
+    name: "Campsite at shield ranch",
+    shortCode: "campsite_at_shield",
+    location: "Hospitality / AUSTIN, TX",
+    category: "hospitality",
+
+  },
+  {
+    name: "Camp Teton",
+    shortCode: "teton",
+    location: "LIVING / JACKSON, WY",
+    category: "living",
+
+  },
+  {
+    name: "Tarryhill residence",
+    shortCode: "Tarryhill",
+    location: "LIVING / AUSTIN, TX",
+    category: "living",
+
+  },
+  {
+    name: "All Saints Presbyterian Church",
+    shortCode: "All-Saints",
+    location: "Religious / austin, TX",
+    category: "religious",
+
+  },
+  {
+    name: "pease road residence",
+    shortCode: "Pease-Road",
+    location: "LIVING / AUSTIN, TX",
+    category: "living",
+
+  },
+  {
+    name: "St.stephen's episcopal school campus",
+    shortCode: "St-Stephan",
+    location: "EDUCATION/ AUSTIN, TX",
+    category: "education",
+
+  },      {
+    name: "Topfer theatre at zach",
+    shortCode: "Topfer",
+    location: "ARTS / AUSTIN, TX",
+    category: "arts",
+
+  },
+  {
+    name: "stone creek camp",
+    shortCode: "Stone-Creek",
+    location: "LIVING / Bigfork, MT",
+    category: "living",
+
+  },
+  {
+    name: "Temple Ranch",
+    shortCode: "Temple_Ranch",
+    location: "LIVING / Duval county, TX",
+    category: "living",
+
+  },      {
+    name: "westview",
+    shortCode: "westview",
+    location: "commercial / Austin, TX",
+    category: "commercial",
+
+  },
+  {
+    name: "Temple beth shalom",
+    shortCode: "Temple-Beth",
+    location: "RELIGIOUS/ AUSTIN, TX",
+    category: "religious",
+
+  },
+  {
+    name: "Tower House",
+    shortCode: "TowerHouse",
+    location: "LIVING / Leander, TX",
+    category: "living",
+
+  },      {
+    name: "Block 21: W Austin Hotel + condo with acl live at moody theater",
+    shortCode: "block21",
+    location: "commercial / Austin, TX",
+    category: "commercial",
+
+  },
+  {
+    name: "Bunny Run Boat Dock",
+    shortCode: "Bunny-Run",
+    location: "LIVING / Austin, TX",
+    category: "living",
+
+  },
+  {
+    name: "Cabin on flathead lake",
+    shortCode: "CabinonFlathead",
+    location: "LIVING / polson, MT",
+    category: "living",
+
+  },      {
+    name: "House above lake austin",
+    shortCode: "HouseAboveLakeAustin",
+    location: "LIVING / Austin, TX",
+    category: "living",
+
+  },
+  {
+    name: "Lake House",
+    shortCode: "LakeHouse",
+    location: "LIVING / Austin, TX",
+    category: "living",
+
+  },
+  {
+    name: "St.Edwards trustee hall",
+    shortCode: "St-Edwards-Trustee",
+    location: "EDucation / Austin, TX",
+    category: "education",
+
+  },
+
+  {
+    name: "Collector's House",
+    shortCode: "Collectors-House",
+    location: "LIVING / Austin, TX",
+    category: "living",
+
+  },
+  {
+    name: "Chihuly bridge of glass",
+    shortCode: "77127",
+    location: "ARTS/ TACOMA, WA",
+    category: "living",
+
+  }
+]  }
+  var templateData = template(data);
+ 
+  document.getElementById('contentDiv').innerHTML += templateData;
+
+  document.getElementById("category").addEventListener("change", function() {      
+      let new_data = data.characters.filter((characters)=> characters.category == this.value)
+      console.log(new_data);
+      document.getElementById('contentDiv').innerHTML = template({characters: new_data});
+      document.getElementById("demo").innerHTML = this.value + " Projects";
+
+    }
+    
+    
+    );
+ 
+ 
+</script>
+ 
+</body>
+</html>
+

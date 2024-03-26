@@ -1,0 +1,92 @@
+<div>
+    {{>nav}}
+</div>
+
+{{#>basemargin}}
+{{#*inline "pageContent"}}
+
+<section class="mt-20">
+    <div>CONTACT</div>
+    <div class=" grid grid-cols-1 lg:grid-cols-5 gap-10 m-20 w-full">
+        <div class="col-span-4 w-9/12">
+            <p class="text-sm">Interested in working with us on a new project? Select 'New Business' from the dropdown menu and we will get back with you shortly.</p>
+            <div class="flex flex-col lg:flex-row justify-evenly py-10">
+                <div class="flex flex-col lg:w-1/2 w-full mr-5">
+                    <input type="text" required class="border-gray-400 border p-3 w-full">
+                    <label for="FULL_NAME" class="pt-5">FULL NAME *</label>
+                </div>
+                <div class="flex flex-col lg:w-1/2 w-full mr-5">
+                    <input type="text" class="border-gray-400 border p-3 w-full ">
+                    <label for="EMAIL" class="pt-5">EMAIL ADDRESS</label>
+                </div>
+            </div>
+            <div class="flex  flex-col lg:flex-row justify-evenly py-10">
+                <div class="flex flex-col lg:w-1/2 w-full mr-5">
+                    <input class="border-gray-400 border p-3  w-full" type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" >
+                    <label for="PHONE" class="pt-5">PHONE NUMBER</label>
+                </div>
+                <div class="flex flex-col lg:w-1/2 w-full mr-5">
+                    <select name="reason" id="reason" class="border-gray-400 border p-3  w-full" >
+                        <option value="Choose">Choose a reason for your inquiry...</option>
+                        <option value="New Business">New Business</option>
+                        <option value="Press">Press</option>
+                        <option value="Careers">Careers</option>
+                        <option value="Collaboration">Collaboration</option>
+
+                    </select>                    
+                    <label for="REASON" class="pt-5">REASON</label>
+                </div>
+            </div>
+            <div class="py-10">
+                <div class="flex flex-col  mr-5">
+                    <input type="text" class="border-gray-400 border h-40  w-full">
+                    <label for="MESSAGE" class="pt-5">MESSAGE</label>
+                </div>
+            </div>
+            <button class="py-5 justify-between w-1/3 border-gray-400 border hover:bg-black hover:text-white"> <span>SEND MESSAGE </span><SPAN class=" ml-10 text-4xl">&#8594;</SPAN> </button>
+
+            <div class="mt-10 text-xs py-10">
+                <span>This site is protected by reCAPTCHA and the </span>
+                <a href="https://policies.google.com/privacy" class="underline">Google Privacy Policy</a>
+                <span> and </span>
+                <a href="https://policies.google.com/terms" class="underline">Terms of Service</a>
+                <span> apply.
+
+            </div>
+        </div>
+        <div class="text-md">
+            <div class="mb-20">GENERAL</div>
+            <ul class="my-5">
+                <li class="">807 Brazos Street</li>
+                <li class="">Suite 800</li>
+                <li class="">Austin, TX 78701</li>
+            </ul>
+            <ul class="my-5">
+                <li class=""><a href="https://google.com/">512.476.5780</li>
+                <li class=""><a href="https://google.com/">info@anderssonwise.com </li>
+            </ul>
+
+            <div class="my-20">PRESS INQUIRIES</div>
+            <ul class="my-5">
+                <li class="">Robin Logan</li>
+                <li class=""><a href="https://google.com/">512-637-5768</li>
+                <li class=""><a href="https://google.com/">robin@anderssonwise.com</li>
+            </ul>
+            <ul class="my-5">
+                <li class="">Katrina Winsko</li>
+                <li class=""><a href="https://google.com/">512.866.3524</li>
+                <li class=""><a href="https://google.com/">katrina@anderssonwise.com</li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+</section>
+
+
+{{/inline}}
+{{/basemargin}}
+
+{{>footer}}
