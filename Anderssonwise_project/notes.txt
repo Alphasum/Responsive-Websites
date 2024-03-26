@@ -1,0 +1,23 @@
+
+@keyframes 
+
+.underline-from-left {
+  transition: width 0.25s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  will-change: width;
+}
+
+.underline-from-left::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: currentColor;
+  animation: underline 0.25s forwards;
+  animation-delay: 0.1s;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -0.5px;
+}
