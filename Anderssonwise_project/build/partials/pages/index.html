@@ -33,7 +33,12 @@
 <section>
     <div class="pt-24">OUR STUDIO</div>
     <p class="px-36 py-10 text-4xl">Andersson / Wise is an architectural design firm in Austin, Texas focused on the idea that a collaborative approach to design leads to a built solution attuned to its purpose. We are an office of thirty-one architects and designers dedicated to excellence in public, educational, religious, hospitality, and residential architectural master planning, design and interiors.</p>
-    <button class="text-right w-full"> MORE ABOUT US  &#8594;</button>
+    <div class="flex justify-end">
+        <div class="grid auto-cols-max self-end">
+            <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="/build/Studio.html">MORE ABOUT US  </a>
+        </div>
+        <p class="px-5">&#8594;</p>                
+    </div>
 
 </section>
 
@@ -47,9 +52,13 @@
             <div class="m-60">
                 <p class="mb-20"> FEATURED PROJECT</p>
                 <p class="text-4xl mt-20"> CAMPSITE AT SHIELD RANCH</p>
-                <p class="mt-20">Campsite at Shield Ranch brings to fruition as sustainable 100% off-grid community designed to engage and celebrate the natural context of this 6800-acre hill country ecologically diverse sanctuary</p>
-                <button class="text-left w-full mt-40"> VIEW THE PROJECT &#8594;</button>
-
+                <p class="my-20">Campsite at Shield Ranch brings to fruition as sustainable 100% off-grid community designed to engage and celebrate the natural context of this 6800-acre hill country ecologically diverse sanctuary</p>
+                <div class="flex justify-end">
+                    <div class="grid auto-cols-max self-end">
+                        <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="/build/Projects.html">VIEW THE PROJECT  </a>
+                    </div>
+                    <p class="px-5">&#8594;</p>                
+                </div>
             </div>
         </div>
     </div>
@@ -60,7 +69,7 @@
 
 <section>
 <div>RECENTLY</div>
-<div class="flex flex-row object-left">
+<div class="grid grid-cols-1 lg:grid-cols-3 w-10/12 m-auto">
     <div class="p-10">
         <button class="text-left"><div class=" bg-black"><img src="/build/img/residence.avif" alt="" class="hover:opacity-80"> <span class="absolute bottom-0 right-0 text-white">&#8594;</span></div>
             <p class="text-2xl my-3">RESIDENCE ON MOUNT BARKER</p>
@@ -80,7 +89,12 @@
         </button>
     </div>
 </div>
-<button class="text-right w-full"> VIEW THE PROJECT &#8594;</button>
+<div class="flex justify-end">
+    <div class="grid auto-cols-max self-end">
+        <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="/build/Projects.html">VIEW ALL PROJECTS  </a>
+    </div>
+    <p class="px-5">&#8594;</p>                
+</div>
 </section>
 
 {{/inline}}

@@ -1,23 +1,37 @@
-    <header class="m-5">
-      <div class=" flex justify-between sticky top-0 z-20 w-full">
-        <h1 class="">
-            <a href="/build/Anderssonwise.html">
-                <Span class="text-4xl ">AW</SPan>
-             </a>
-        </h1>
-        <div>
-          <button id="hamburger-button" class="relative h-16 w-16 cursor-pointer mr-5">
-            &#9776; 
-          </button>
-        </div>
+
+<div class=" w-full">
+  <header class="m-5">
+    <div class=" flex justify-between ">
+      <h1 class="">
+          <a href="/build/Anderssonwise.html">
+              <Span class="text-4xl ">AW</SPan>
+           </a>
+      </h1>
+      <div class="fixed right-0 top-0 z-20">
+        <button id="hamburger-button" class="relative text-4xl h-32 w-16 cursor-pointer mr-5">
+          &#9776; 
+        </button>
       </div>
-    </header>
-    <div id="mobile-menu"
-      class="hidden h-screen w-screen fixed top-0 bg-amber-800 opacity-80 text-6xl text-white p-4 m-auto z-20">
-      <nav class=" items-center flex flex-col justify-center m-auto" aria-label="mobile">
-        <a href=""><span class="p-10">STUDIO</span></a>
-        <a href="/build/Projects.html"><span class="p-10 hover:underline">PROJECTS</span></a>
-        <a href=""><span class="p-10">PRESS + AWARDS</span></a>
-        <a href="/build/Contact.html"><span class="p-10 hover:underline">CONTACTS</span></a>
-      </nav>
     </div>
+  </header>
+  <div id="mobile-menu"
+    class="hidden h-screen w-screen fixed top-0 bg-amber-800 opacity-80 text-6xl text-white p-4 m-auto z-20">
+    <nav class=" items-center flex flex-col justify-center m-auto" aria-label="mobile">
+      <div class="grid auto-cols-max self-center p-5">
+        <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-white text-nowrap " href="/build/Studio.html">STUDIO</a>
+    </div>
+    <div class="grid auto-cols-max self-center p-5">
+      <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-white text-nowrap " href="/build/Projects.html">PROJECTS</a>
+    </div>
+    <div class="grid auto-cols-max self-center p-5">
+      <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-white text-nowrap " href="/build/press-awards.html">PRESS + AWARDS</a>
+    </div>
+    <div class="grid auto-cols-max self-center p-5">
+      <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-white text-nowrap " href="/build/Contact.html">CONTACTS </a>
+    </div>
+  </div>
+
+
+    </nav>
+  </div>
+</div>
