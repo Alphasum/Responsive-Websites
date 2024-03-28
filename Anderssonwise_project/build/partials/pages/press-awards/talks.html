@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anderssonwise_Projects</title>
+  <script src="/handlebars-v4.7.8.js"></script>
+  <link rel="stylesheet" href="/build/css/style.css">
+
+</head>
+<body>
+ 
+<div id="contentDiv"></div>
+ 
+<script src="/build/js/nav.js"></script>
+<script src="/build/js/contact.js"></script>
+<script src="/build/js/footer.js"></script>
+<script src="/build/js/main.js"></script>
+<script src="/build/js/basemargin.js"></script>
+<script src="/build/js/video.js"></script>
+<script id="the-template" type="text/x-handlebars-template">
+
+<div>
+    {{>nav}}
+</div>  
+
+
+<p id="demo" class="uppercase mx-20">ALL TALKS + LECTURES</p>
+<section class="grid lg:grid-cols-2  w-10/12 m-auto" >
+    {{#each characters}}
+        <div class="p-10 ">
+            <button class="text-left" id="video" onclick="videomenu()">                
+                    <div class=" bg-black">
+                        <img src="/build/img/talks/{{shortCode}}.avif" alt="" class="hover:opacity-50"> 
+                        <span class="absolute bottom-0 right-0 text-white">&#8594;</span>
+                    </div>
+                        <p class="text-xl my-3">{{name}}</p>
+                        <p class="text-sm uppercase">{{month}}</p>
+                        <p id="videolink">{{link}}</p>
+                                
+            </button>
+        </div>
+
+    {{/each}}
+</section>
+{{>footer}}
+
+<div id="videooverlay"
+class="hidden h-screen w-screen fixed top-0 bg-black m-auto z-0">
+<div class=" h-screen w-screen items-center flex flex-col justify-center  m-auto" aria-label="mobile">
+    <div>
+    <iframe width="1280" height="720" allowfullscreen
+    src="" class="aspect-video" id="iframevideo">
+    </iframe>    
+</div>
+</div>
+
+
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+var templateInfo = document.getElementById("the-template").innerHTML;
+  var template = Handlebars.compile(templateInfo);
+
+ let data = {
+
+characters: [
+
+  {
+    name: "Elizita Ranch | Andersson/Wise | 2023 AIA Austin Design Award of Merit",
+    shortCode: "AWA-ElizitaRanch-exteriors-007_2022-12-05-175312_ijrq",
+    month: "May 2023",
+    link: "https://www.youtube.com/embed/RHuQ5T4A7tA",
+
+  },
+  {
+    name: "The Artistry & Design of Sacred Space - Cross and Culture 2023",
+    shortCode: "230419-ASPC-Sanctuary-South-Elevation-01",
+    month: "July 2023",
+    link: "https://www.youtube.com/embed/2jiJkPQgFWE&t",
+  },
+  {
+    name: "OFF-GRID tech: This Texas Ranch has it figured out...",
+    shortCode: "Camp_Prelims_-5",
+    month: "March 2023",
+    link: "https://www.youtube.com/embed/AkzXfNzUNlU",
+
+  },
+  {
+    name: "All Saints Presbyterian Church",
+    shortCode: "All-Saints-041",
+    month: "May 2019",
+    link: "https://www.youtube.com/embed/fhGwOLYk0z8",
+
+  },
+  {
+    name: "Arthur Andersson and Chris Wise lecture at the University of Texas at Austin School of Architecture",
+    shortCode: "AA-CW-at-UTSOA",
+    month: "October 2015",
+    link: "https://www.youtube.com/embed/iYoXFc6I6Ag",
+
+  },
+  {
+    name: "2015 AIA Austin Design Award-Bunny Run Boat Dock",
+    shortCode: "Bunny-Run-Boat-Dock-Andrew-Pogue-H-Jump-2",
+    month: "May 2015",
+    link: "https://www.youtube.com/embed/XMiA7_vuTRQ",
+
+  },
+  {
+    name: "2014 AIA Austin Design Award - Andersson-Wise Architects, The Wycliffe-Freeman Dorm & Faculty Res",
+    shortCode: "0903-St-Stephan-Dormitory-Andrew-Pogue-H-Ext-Entry-Coutyard",
+    month: "May 2014",
+    link: "https://www.youtube.com/embed/A3FOGl9XwIc&t",
+
+  },
+  {
+    name: "2014 AIA Austin Design Award - Andersson-Wise Architects, Temple Dining Hall & Booth Student Center",
+    shortCode: "0903A-St-Stephan-Dining-Hall-Andrew-Pogue-H-Dining-Area-2",
+    month: "May 2014",
+    link: "https://www.youtube.com/embed/l-MdYzhOyLk&t",
+
+  },
+  {
+    name: "2014 AIA Austin Design Award - Andersson-Wise Architects, The Topfer Theatre at Zach",
+    shortCode: "0902-Topfer-Theatre-at-ZACH-Andrew-Pogue-H-Ext-3_2022-12-14-162103_pxki",
+    month: "May 2014",
+    link: "https://www.youtube.com/embed/P5vnNmXCy8E&t",
+
+  },
+  {
+    name: "ArchDaily interviews Arthur Andersson",
+    shortCode: "RD_CampTeton_0604_F",
+    month: "April 2014",
+    link: "https://www.youtube.com/embed/MpNQMLqLvs4&t",
+
+  }
+]  }
+  var templateData = template(data);
+ 
+  document.getElementById('contentDiv').innerHTML += templateData;
+ 
+</script>
+ 
+</body>
+</html>
+

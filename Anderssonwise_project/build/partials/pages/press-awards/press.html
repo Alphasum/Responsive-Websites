@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anderssonwise_Projects</title>
+  <script src="/handlebars-v4.7.8.js"></script>
+  <link rel="stylesheet" href="/build/css/style.css">
+
+</head>
+<body>
+ 
+<div id="contentDiv"></div>
+ 
+<script src="/build/js/nav.js"></script>
+<script src="/build/js/contact.js"></script>
+<script src="/build/js/footer.js"></script>
+<script src="/build/js/main.js"></script>
+<script src="/build/js/basemargin.js"></script>
+<script id="the-template" type="text/x-handlebars-template">
+
+<div>
+    {{>nav}}
+</div>  
+
+
+<p id="demo" class="uppercase mx-20">All Press</p>
+
+<section class="grid lg:grid-cols-2 w-10/12 m-auto">
+        {{#each characters}}
+        <div class="p-10 ">
+            <button class="text-left"><a href="{{link}}"> 
+                <div class=" bg-black">
+                    <img src="/build/img/press/{{shortCode}}.avif" alt="" class="hover:opacity-50"> 
+                    <span class="absolute bottom-0 right-0 text-white">&#8594;</span></div>
+                    <p class="text-xl my-3">{{name}}</p>
+                    <p class="text-sm uppercase">{{location}}</p>
+            </a>
+                
+            </button>
+        </div>
+        {{/each}}
+
+</section>
+
+{{>footer}}
+
+</script>
+
+
+
+
+<script type="text/javascript">
+var templateInfo = document.getElementById("the-template").innerHTML;
+  var template = Handlebars.compile(templateInfo);
+
+ let data = {
+
+characters: [
+  {
+    name: "The Campsite at Shield Ranch",
+    shortCode: "Leonid_Furmansky_Camp_Shield_Andersson_Wise",
+    location: "Sustainable.org",
+    link: "https://www.sustainablesites.org/node/8507",
+  },
+  {
+    name: "Good SITES design leads to happy campers at Shield Ranch",
+    shortCode: "Good_sites_design_leads",
+    location: "Sustainable.org",
+    link: "https://sustainablesites.org/good-sites-design-leads-happy-campers-shield-ranch",
+
+  },
+  {
+    name: "Camp Teton is a richly designed Wyoming retreat",
+    shortCode: "RD_CampTeton_0604_F",
+    location: "Wallpaper.com",
+    link: "https://www.wallpaper.com/architecture/camp-teton-house-wyoming-retreat-usa",
+
+  },
+  {
+    name: "Stacked-Wood Walls Tie This Eco-Friendly Camp to the Montana Landscape",
+    shortCode: "0203-Stone-Creek-Camp-Art-Gray-H-Main-House-1-1",
+    location: "Dwell.com",
+    link: "https://www.dwell.com/article/stacked-wood-walls-tie-this-eco-friendly-camp-to-the-montana-landscape-34dff658",
+
+  },
+  {
+    name: "Off-grid boathouse by Andersson-Wise sits on Lake Austin",
+    shortCode: "05_LakeHouse_ch5_0221A",
+    location: "Dezeen.com",
+    link: "https://www.dezeen.com/2017/09/19/andersson-wise-off-the-grid-boathouse-lake-austin-texas/",
+
+  },
+  {
+    name: "Andersson-Wise's Tower House provides cabin with extra lakefront accommodation",
+    shortCode: "02_TowerHouse_ch2_0011B",
+    location: "Dezeen.com",
+    link: "https://www.dezeen.com/2017/09/22/andersson-wise-tower-house-provides-cabin-extra-lakefront-accommodation-architecture/",
+
+  },
+  {
+    name: "Tradition[alism] Resurgent",
+    shortCode: "All-Saints-045",
+    location: "Magazine.texasarchitects.org",
+    link: "https://magazine.texasarchitects.org/2017/05/16/traditionalism-resurgent/",
+
+  },
+  {
+    name: "Andersson-Wise assembles new and salvaged materials into rustic Austin boathouse",
+    shortCode: "Bunny-Run-Boat-Dock-Andrew-Pogue-H-Jump-2",
+    location: "Dezeen.com",
+    link: "https://www.dezeen.com/2017/05/02/andersson-wise-architects-new-salvaged-materials-rustic-bunny-run-boat-dock-boathouse-austin-texas/",
+
+  },
+  {
+    name: "Andersson-Wise to Convert Austin School Bus Facility Into Marketplace",
+    shortCode: "st-elmo-placeholder_2020-07-14-145443",
+    location: "Interiordesign.net",
+    link: "https://interiordesign.net/designwire/andersson-wise-to-convert-austin-school-bus-facili/",
+
+  },
+  {
+    name: "The Poetry of Place",
+    shortCode: "Bunny-Run-Boat-Dock-Andrew-Pogue-H-Entry-View-Dusk",
+    location: "1stdibs.com",
+    link: "https://www.1stdibs.com/introspective-magazine/andersson-wise-architects/",
+
+  },
+  {
+    name: "Arthur Andersson on Timeless Materials & Building  ''Ruins'' ",
+    shortCode: "02_TowerHouse_ch2_0281A_2020-07-14-231143",
+    location: "Archdaily.com",
+    link: "https://www.archdaily.com/516813/arthur-andersson-on-timeless-materials-and-building-ruins",
+
+  },
+  {
+    name: "Block 21 / Andersson Wise Architects",
+    shortCode: "0415-Block-21-W-Austin-Andrew-Pogue-H-northwest-corner-of-tower",
+    location: "Archdaily.com",
+    link: "https://www.archdaily.com/479373/block-21-andersson-wise-architects?ad_source=search&ad_medium=projects_tab",
+
+  },
+  {
+    name: "Block 21 building recognized for eco-friendly features",
+    shortCode: "0415-Block-21-W-Austin-Jonathan-Jackson-H-SWcorner",
+    location: "statesman.com",
+    link: "https://www.statesman.com/story/business/2012/09/01/block-21-building-recognized-for-eco-friendly-features/9880193007/",
+
+  },
+  {
+    name: "Collector's House by Andersson Wise",
+    shortCode: "0003-Collectors-House-Art-Gray-H-Overall-Living-Room-1-2-copy",
+    location: "The189.com",
+    link: "https://the189.com/design/collectors-house-by-andersson-wise/",
+
+  },
+  {
+    name: "Block 21, home to ACL Live and the W Austin Hotel, receives world-wide recognition for environmental stewardship",
+    shortCode: "block21-14",
+    location: "Austin.culturemap.com",
+    link: "https://austin.culturemap.com/news/fashion/03-06-12-10-46-block-21-home-to-acl-live-and-the-w-austin-hotel-receives-world-wide-recognition-for-environmental-stewardship",
+
+  },
+  {
+    name: "W Austin Hotel and Residences with Austin City Limits Live and Moody Theatre by Andersson-Wise Architects",
+    shortCode: "0415-Block-21-W-Austin-Andrew-Pogue-V-Exterior-West-Tower-From-Street",
+    location: "Architecturalrecord.com",
+    link: "https://www.architecturalrecord.com/articles/7246-w-austin-hotel-and-residences-with-austin-city-limits-live-at-moody-theatre-by-andersson-wise-architects",
+
+  },
+  {
+    name: "Arts Awards",
+    shortCode: "0415-Block-21-W-Austin-W-Hotels-Worldwide-H-WET-at-Dawn",
+    location: "Austinchronicle.com",
+    link: "https://www.austinchronicle.com/arts/2011-12-09/arts-awards/",
+
+  },
+  {
+    name: "W Austin Hotel and Residences with Austin City Limits Live and Moody Theatre by Andersson-Wise Architects",
+    shortCode: "0415-Block-21-W-Austin-Andrew-Pogue-V-south-facade-of-tower",
+    location: "Architecturalrecord.com",
+    link: "https://www.architecturalrecord.com/articles/7246-w-austin-hotel-and-residences-with-austin-city-limits-live-at-moody-theatre-by-andersson-wise-architects",
+
+  },
+  {
+    name: "Wierd City Rising",
+    shortCode: "02_TowerHouse_ch2_0141A_addendum01",
+    location: "wearedesignbureau.com",
+    link: "https://www.wearedesignbureau.com/projects/weird-city-rising/",
+
+  },
+  {
+    name: "Dramatic unveiling: ZACH previews the progress of their new Topfer Theatre",
+    shortCode: "0902-Topfer-Theatre-at-ZACH-Andrew-Pogue-H-Ext-Far",
+    location: "Austin.culturemap.com",
+    link: "https://austin.culturemap.com/news/arts/11-09-11-14-37-preview-of-zachs-new-topfer-theatre-in-progress",
+
+  },
+  {
+    name: "Gorgeous Flathead Lake Cabin is a Minimalist Home for the True Adventurer",
+    shortCode: "06_CabinonFlatheadLake_ch6_0121A_new",
+    location: "Inhabitat.com",
+    link: "https://inhabitat.com/minimalist-flathead-lake-cabin-is-a-gorgeous-home-for-the-true-adventurer/",
+
+  },
+  {
+    name: "Cabin on Flathead Lake",
+    shortCode: "06_CabinonFlatheadLake_ch6_0051B",
+    location: "issuu.com",
+    link: "https://issuu.com/taartdir/docs/ta11_09.10_web/62",
+
+  },
+  {
+    name: "Open House",
+    shortCode: "02_TowerHouse_ch2_0241A_addendum01",
+    location: "issuu.com",
+    link: "https://issuu.com/taartdir/docs/ta11_07.08_webpreview/10",
+
+  },
+  {
+    name: "HOUSE OF THE MONTH: Stone Creek Camp",
+    shortCode: "0203-Stone-Creek-Camp-Art-Gray-H-Main-House-Porch-1-small",
+    location: "Architecturalrecord.com",
+    link: "https://www.architecturalrecord.com/articles/8513-stone-creek-camp-by-andersson-wise-architects",
+
+  },
+  {
+    name: "Tower House by Andersson-Wise Architects",
+    shortCode: "02_TowerHouse_ch2_0211B_addendum01",
+    location: "Contemporist.com",
+    link: "https://www.contemporist.com/tower-house-by-andersson-wise-architects/",
+
+  },
+  {
+    name: "Dispatch | Austin's New Hot Hood",
+    shortCode: "0415-Block-21-W-Austin-Jonathan-Jackson-H-Crowd",
+    location: "Archive.nytimes.com",
+    link: "https://archive.nytimes.com/tmagazine.blogs.nytimes.com/2011/05/05/dispatch-austins-new-hot-hood/?scp=1&sq=w%2520austin&st=Search",
+
+  },
+  {
+    name: "Tower House / Andersson Wise Architects",
+    shortCode: "02_TowerHouse_ch2_0082B",
+    location: "Archdaily.com",
+    link: "https://www.archdaily.com/83133/tower-house-andersson-wise-architects",
+
+  },
+  {
+    name: "Stone Creek Camp / Andersson Wise Architects",
+    shortCode: "0203-Stone-Creek-Camp-Art-Gray-H-Main-House-1-1 (1)",
+    location: "Archdaily.com",
+    link: "https://www.archdaily.com/79724/stone-creek-camp-andersson-wise-architects",
+
+  },
+  {
+    name: "Wood Cabin by Andersson Wise Architects, Polson, Montana, USA",
+    shortCode: "06_CabinonFlatheadLake_ch6_0101A",
+    location: "Architectural-Review.com",
+    link: "https://www.architectural-review.com/today/wood-cabin-by-andersson-wise-architects-polson-montana-usa",
+
+  },
+  {
+    name: "Zach announces new theater plans",
+    shortCode: "0902-Topfer-Theatre-at-ZACH-Andrew-Pogue-H-Ext-3",
+    location: "statesman.com",
+    link: "https://www.statesman.com/story/news/2012/09/21/zach-announces-new-theater-plans/9938717007/",
+
+  },
+  {
+    name: "Arthur Andersson Turns a Lakeside Montana Compound Into an Indoor-Outdoor Oasis",
+    shortCode: "0203-Stone-Creek-Camp-Art-Gray-H-Ext-Courtyard-copy",
+    location: "Architecturaldigest.com",
+    link: "https://www.architecturaldigest.com/story/boone-article-052009",
+
+  },
+  {
+    name: "A Museum Addition at Kansas State U., Cast in Concrete, Lets in Spirits",
+    shortCode: "0110-Beach-Museum-of-Art-H-Entrance",
+    location: "Chronicle.com",
+    link: "https://www.chronicle.com/blogs/buildings/a-museum-addition-at-kansas-state-u-cast-in-concrete-lets-in-spirits",
+
+  },
+  {
+    name: "New Heights: Texas Chill",
+    shortCode: "0415-Block-21-W-Austin-Andrew-Pogue-H-northwest-corner-of-tower (1)",
+    location: "Architectmagazine.com",
+    link: "https://www.architectmagazine.com/design/texas-chill_o",
+
+  }
+]  }
+  var templateData = template(data);
+ 
+  document.getElementById('contentDiv').innerHTML += templateData;
+ 
+</script>
+ 
+</body>
+</html>
+
