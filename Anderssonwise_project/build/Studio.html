@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html class="scroll-smooth">
+<head>
+  <title>Anderssonwise_Projects</title>
+  <script src="/handlebars-v4.7.8.js"></script>
+  <link rel="stylesheet" href="/build/css/style.css">
+
+</head>
+<body>
+ 
+<div id="contentDiv"></div>
+ 
+<script src="/build/js/nav.js"></script>
+<script src="/build/js/contact.js"></script>
+<script src="/build/js/footer.js"></script>
+<script src="/build/js/main.js"></script>
+<script src="/build/js/basemargin.js"></script>
+<script id="the-template" type="text/x-handlebars-template">
+
+<div>
+    {{>nav}}
+</div>  
+<div class="">
+  <div class="hidden md:grid grid-cols-4 gap-2 w-1/3 m-auto">
+    <div class="grid auto-cols-max self-end">
+      <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="#principals">PRINCIPALS </a>
+  </div>
+  <div class="grid auto-cols-max self-end">
+    <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="#team">TEAM </a>
+  </div>
+  <div class="grid auto-cols-max self-end">
+    <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="#monograph">MONOGRAPH</a>
+  </div>
+  <div class="grid auto-cols-max self-end">
+    <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="#careers">CAREERS </a>
+  </div>
+</div>
+
+</div>
+<section class="w-10/12 m-auto pb-10 pt-40">
+    <p  class="uppercase p-5 text-lg  text-nowrap">Our Studio</p>
+<div class="animate-speedunderline">
+    <img class="py-20 px-5 " src="/build/img/team/A-W-Group-Shots_selects-32.avif" alt="">
+</div>
+</section>
+
+
+<section id="principals" class="bg-creamy ">
+    <p class="uppercase w-10/12 m-auto py-32 text-lg">PRINCIPALS</p>
+    <section class="grid grid-cols-1 lg:grid-cols-2 w-10/12 m-auto py-20">
+            <div class="p-3 lg:w-8/12 m-auto">
+                <div class=" bg-black">
+                    <img src="/build/img/team/arthur-w-andersson.avif" alt="" > 
+                    <span class="absolute bottom-0 right-0 text-white">&#8594;</span>
+                </div>
+                    <p class="text-2xl my-3 uppercase pt-10">ARTHUR W. ANDERSSON</p>
+                    <p class="text-md ">PRESIDENT / FAIA</p>
+                    <p class="text-md py-10">As Design Director, Arthur’s role is to provide leadership by integrating the client into the collaborative process and establishing design concepts. He is the principal in charge of the overall design process and of facilitating client communications through the design phases of each project.</p>               
+            </div>
+            
+            <div class="p-3 lg:w-8/12 m-auto">
+                <div class=" bg-black">
+                    <img src="/build/img/team/f-christian-wise.avif" alt=""> 
+                    <span class="absolute bottom-0 right-0 text-white">&#8594;</span>
+                </div>
+                    <p class="text-2xl my-3 uppercase pt-10">F. CHRISTIAN WISE</p>
+                    <p class="text-md ">PRINCIPAL / AIA</p>
+                    <p class="text-md  py-10">Chris’s role is to provide leadership as a Managing Partner. He is the principal in charge through the technical phases of the work and the construction of each project, ensuring that the design concepts are integrated through the entirety of the process.</p>               
+            </div>
+
+    </section>
+</section>
+
+
+<img src="/build/img/team/Working-with-Us.avif" alt="">
+
+
+<p id="team" class="uppercase w-10/12 m-auto p-5 text-lg">Our team</p>
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-10/12 m-auto py-20">
+        {{#each characters}}
+        <div class="p-3">
+            <button class="text-left"><a href="{{email}}"> 
+                <div class=" bg-black">
+                    <img src="/build/img/team/{{shortCode}}.avif" alt="" class="hover:opacity-50"> 
+                    <span class="absolute bottom-0 right-0 text-white">&#8594;</span></div>
+                    <p class="text-xl my-3 uppercase">{{name}}</p>
+                    <p class="text-sm ">{{telephone}}</p>
+                    <p class="text-sm ">{{email}}</p>
+
+            </a>
+                
+            </button>
+        </div>
+        {{/each}}
+
+</section>
+
+<section id="monograph" class="bg-creamy ">
+    <div class="w-10/12 m-auto flex lg:flex-row flex-col justify-between">
+        <div class="lg:w-2/5 py-5 lg:py-40 lg:px-40">
+            <p  class="uppercase m-auto text-lg py-24 ">MONOGRAPH</p>
+            <div class="h-3/6 hidden lg:flex"></div>
+            <img class="size-min pb-10" src="/build/img/team/andersson_wise_natural_houses.avif" alt="">    
+            <div class="flex justify-start">
+                <div class="grid auto-cols-max self-end">
+                    <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="https://www.amazon.com/dp/1568988796/ref=cm_sw_em_r_mt_dp_U_0IocFb1RTRDNC">PURCHASE THE BOOK </a>
+                </div>
+                <p class="px-5">&#8594;</p>                
+            </div>
+    
+        
+        
+        </div>
+        <div class="lg:w-3/5 py-5  lg:py-40 lg:px-40">
+            <img class="hidden lg:flex" src="/build/img/team/03_HouseAboveLakeAustin_ch3_0152C.avif" alt="">    
+            <h1 class="text-4xl lg:py-28 py-5 ">NATURAL HOUSES</h1>
+            <p class="lg:py-10 py-5 ">"Natural Houses presents seven of the Austin, Texas-based firm’s exquisitely crafted projects. Precise and cool, these painstakingly crafted houses are made from regionally appropriate and aesthetically timeless materials, and present a range of sites and residences – from a small cabin in the woods to a multibuilding camp."</p>
+            <p class="py-5 "> Princeton Architectural Press</p>
+        </div>
+    </div>
+</section>
+
+<section id="careers" class="lg:w-10/12 lg:m-40 m-10">
+    <div class="flex lg:flex-row flex-col justify-between">
+        <img class="lg:w-1/2" src="/build/img/team/03_HouseAboveLakeAustin_ch3_0371A.avif" alt="">
+        <div class="lg:w-1/2 lg:py-80 lg:px-40">
+            <p  class="uppercase m-auto py-10 text-lg">CAREERS</p>
+            <h1 class="text-4xl py-10">OPPORTUNITIES AT ANDERSSON WISE</h1>
+            <p class="py-10">We’re always on the lookout for people who have a strong sense of design that balances form and function combined with a penchant for detail. Please see the list of available positions below or contact us to submit your CV.</p>
+            <div class="flex justify-end">
+                <div class="grid auto-cols-max self-end">
+                    <a class=" hover:animate-speedunderline hover:border-b-4 hover:border-black text-nowrap " href="/build/Contact.html">APPLY NOW  </a>
+                </div>
+                <p class="px-5">&#8594;</p>                
+            </div>
+            
+            
+
+        </div>
+    </div>
+
+
+</section>
+
+{{>footer}}
+
+</script>
+
+
+
+
+<script type="text/javascript">
+var templateInfo = document.getElementById("the-template").innerHTML;
+  var template = Handlebars.compile(templateInfo);
+
+ let data = {
+
+characters: [
+  {
+    name: "Robin Logan",
+    shortCode: "Robin-Logan",
+    telephone: "512-637-5768",
+    email: "robin@anderssonwise.com",
+  },
+  {
+    name: "Tess-Ross",
+    shortCode: "Tess-Ross",
+    telephone: "512-476-5780",
+    email: "tess@anderssonwise.com",
+
+  },
+  {
+    name: "Kamree Cameron, RA",
+    shortCode: "Andersson-Wise_Head-Shot-10",
+    telephone: "512-637-5794",
+    email: "kamree@anderssonwise.com",
+
+  },
+  {
+    name: "Ryan Oliason, AIA",
+    shortCode: "Ryan-Oliason",
+    telephone: "512-866-3523",
+    email: "ryan@anderssonwise.com",
+
+  },
+  {
+    name: "Kailen Ko",
+    shortCode: "Kailen-Ko",
+    telephone: "540-550-1589",
+    email: "kailen@anderssonwise.com",
+
+  },
+  {
+    name: "Selina Ortiz Hasler, AIA",
+    shortCode: "Selina-cropped",
+    telephone: "512-637-5772",
+    email: "selina@anderssonwise.com",
+  },
+  {
+    name: "Ang-Ruei shih, AIA",
+    shortCode: "ang-ruei-shih",
+    telephone: "512-637-5765",
+    email: "ray@anderssonwise.com",
+
+  },
+  {
+    name: "Adolfo Moreno",
+    shortCode: "adolfo-moreno",
+    telephone: "512-637-5770",
+    email: "adolfo@anderssonwise.com",
+
+  },
+  {
+    name: "Ben Kruse",
+    shortCode: "ben-kruse",
+    telephone: "512-637-5796",
+    email: "ben@anderssonwise.com",
+
+  },
+  {
+    name: "Aitana Medina Hernandez",
+    shortCode: "Aitana-Medina-Hernandez",
+    telephone: "512-637-5769",
+    email: "aitana@anderssonwise.com",
+
+  },
+  {
+    name: "Farnaz Koohifar, RA",
+    shortCode: "Andersson-Wise_Head-Shot-3",
+    telephone: "512-637-5780",
+    email: "farnaz@anderssonwise.com",
+  },
+  {
+    name: "Nick Lutte",
+    shortCode: "Nick-Lutte",
+    telephone: "512-637-5762",
+    email: "nick@anderssonwise.com",
+
+  },
+  {
+    name: "Bobby Nolen, AIA",
+    shortCode: "Andersson-Wise_Head-Shot-5",
+    telephone: "512-637-5760",
+    email: "bobby@anderssonwise.com",
+
+  },
+  {
+    name: "Catalina Valencia, AIA",
+    shortCode: "Andersson-Wise_Head-Shot-7",
+    telephone: "512-637-5797",
+    email: "catalina@anderssonwise.com",
+
+  },
+  {
+    name: "Katrina Winsko, Leed AP BD+C, RA",
+    shortCode: "Katrina-Winsko",
+    telephone: "512-866-3524",
+    email: "katrina@anderssonwise.com",
+
+  },
+  {
+    name: "Grayson Muia",
+    shortCode: "Andersson-Wise_Head-Shot",
+    telephone: "512-637-5784",
+    email: "grayson@anderssonwise.com",
+  },
+  {
+    name: "Andrew Brandt",
+    shortCode: "Andersson-Wise_Head-Shot-8",
+    telephone: "612-226-6287",
+    email: "andrew@anderssonwise.com",
+
+  },
+  {
+    name: "Dominic Armendariz",
+    shortCode: "Andersson-Wise_Head-Shot-2",
+    telephone: "512-637-5767",
+    email: "dom@anderssonwise.com",
+
+  },
+  {
+    name: "Michael Peisel",
+    shortCode: "Andersson-Wise_Head-Shot-4",
+    telephone: "512-886-0076",
+    email: "michael@anderssonwise.com",
+
+  },
+  {
+    name: "Claire Townley, AIA",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "512-866-3679",
+    email: "claire@anderssonwise.com",
+
+  },
+
+  {
+    name: "Anna Cook",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "512-886-3663",
+    email: "anna@anderssonwise.com",
+  },
+  {
+    name: "Wilkie Miller",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "512-887-1413",
+    email: "andrew@anderssonwise.com",
+
+  },
+  {
+    name: "Ashley Skidmore",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "512-893-7147",
+    email: "ash@anderssonwise.com",
+
+  },
+  {
+    name: "Avi Odenheimer, Leed AP BD+C",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "512-886-3676",
+    email: "avi@anderssonwise.com",
+
+  },
+  {
+    name: "Ivan Gonzalez",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "512-887-3858",
+    email: "ivan@anderssonwise.com",
+
+  },
+  {
+    name: "Maarten Janssens",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "512-887-4062",
+    email: "maarten@anderssonwise.com",
+
+  },
+  {
+    name: "Samantha Lopez",
+    shortCode: "Aitana-gray-box_2022-11-28-203548_wnay",
+    telephone: "N/A",
+    email: "sam@anderssonwise.com",
+
+  }
+]  }
+  var templateData = template(data);
+ 
+  document.getElementById('contentDiv').innerHTML += templateData;
+ 
+</script>
+ 
+</body>
+</html>
+
